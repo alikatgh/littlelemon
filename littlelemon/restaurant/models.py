@@ -17,3 +17,7 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.name
+
+
+def __str__(self):
+    return f'{self.title} : {str(self.price)}'

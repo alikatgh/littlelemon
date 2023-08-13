@@ -22,4 +22,5 @@ urlpatterns = [
          views.SingleMenuItemView.as_view(), name='menu-detail'),
     path('message/', views.msg, name='message'),
     path('api-token-auth/', obtain_auth_token, name='api-token-auth'),
+    path('menu-items/', views.MenuItemsView.as_view(), name='menu-items-list'),
 ]
