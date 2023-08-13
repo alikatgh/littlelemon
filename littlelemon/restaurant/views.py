@@ -1,3 +1,5 @@
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
 from .serializers import BookingSerializer
 from .models import Booking
 from rest_framework import generics
@@ -38,4 +40,10 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
 
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
-    serializer_class = BookingSerializer
+    serializer_class = [IsAuthenticated]
+
+
+@api_view()
+@permission_classes([IsAuthenticated])
+def msg(request):
+    return Response({"message": "This view is protected"})

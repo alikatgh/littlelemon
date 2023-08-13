@@ -1,3 +1,4 @@
+from .models import MenuItem
 from .models import Booking  # Assuming your booking model is named 'Booking'
 from .models import Menu  # Assuming your model is named 'Menu'
 from django.contrib.auth.models import User
@@ -19,4 +20,10 @@ class MenuSerializer(serializers.ModelSerializer):
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
+        fields = '__all__'
+
+
+class MenuItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MenuItem
         fields = '__all__'
