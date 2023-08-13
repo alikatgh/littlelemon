@@ -1,0 +1,26 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "My Local MySQL",
+      "driver": "MySQL",
+      "server": "127.0.0.1",
+      "port": 3306,
+      "database": "LittleLemon",
+      "username": "root",
+      "password": "1234"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "username": "root",
+      "name": "LittleLemon",
+      "database": "LittleLemon"
+    }
+  ]
+}
